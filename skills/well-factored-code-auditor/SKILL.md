@@ -60,20 +60,32 @@ digraph audit {
 
 ## Superpowers Dependency
 
-This skill builds on the excellent [superpowers](https://github.com/obra/superpowers-marketplace) plugin by Jesse Vincent, whose disciplined approach to skill-driven AI workflows inspired our methodology. We're grateful for that foundation.
+This skill builds on the excellent [Superpowers](https://github.com/obra/superpowers) plugin by Jesse Vincent, whose disciplined approach to skill-driven AI workflows is our inspiration. We're grateful for that foundation, and to Jesse and the community that maintains and improves Superpowers.
 
 **At the start of the audit, check if `superpowers` skills are available** by looking for `superpowers:writing-plans` in the available skills list.
 
-**If superpowers IS installed:** Use `superpowers:writing-plans` in Phases 2 and 6 as specified. Use `superpowers:executing-plans` for Phase 3 if the analysis plan warrants it.
+**If Superpowers IS installed:** Use `superpowers:writing-plans` in Phases 2 and 6 as specified. Use `superpowers:executing-plans` for Phase 3 if the analysis plan warrants it.
 
-**If superpowers is NOT installed:** Tell the user:
+**If Superpowers is NOT installed:** Tell the user:
+"You don't seem to have Superpowers installed. The Well Factored Code Auditor will still do its job, but might not do it as well as if you give it Superpowers."
+
+Then explain:
 - Phases 1, 3, 4, and 5 work fully without superpowers
 - Phase 2 (Analysis Planning) will produce a plan inline instead of using the structured writing-plans workflow — still functional but less rigorous
 - Phase 6 (Refactoring Plan) will produce a prioritized list inline instead of a formal plan document — actionable but less structured
 - Offer: "The superpowers plugin would improve the planning phases. Would you like instructions for installing it?"
 
 **Install instructions (provide if asked):**
-```bash
+[You'll find the official install instructions here.](https://github.com/obra/superpowers#claude-code-via-plugin-marketplace). 
+
+Open Claude Code, then paste these commands:
+```
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+```
+
+You can also do this from a command line:
+```
 claude plugin marketplace add obra/superpowers-marketplace
 claude plugin install superpowers@superpowers-marketplace
 ```

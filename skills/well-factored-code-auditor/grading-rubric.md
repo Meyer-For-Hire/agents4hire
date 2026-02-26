@@ -40,6 +40,23 @@ High-severity findings in fundamental principles pull the grade down more than c
 - **Moderate weight:** Test Adequacy, YAGNI — important but more localized in impact
 - **Lighter weight:** Consistency — matters for maintainability but rarely causes bugs
 
+## Cyclomatic Complexity Reference
+
+Cyclomatic complexity (CC) measures the number of independent paths through a method. Use a tool when available (SwiftLint `cyclomatic_complexity`, `lizard`, `radon`, ESLint `complexity` rule). When no tool is available, estimate by counting branch points (if/else, switch cases, guard, ternary, catch blocks) and **always prefix with `~` to indicate an estimate**.
+
+| CC | Risk Level | Interpretation |
+|---|---|---|
+| 1-5 | Low | Simple, easy to understand and test |
+| 6-10 | Moderate | Reasonable for methods with real logic; test all paths |
+| 11-15 | High | Hard to understand fully; strong candidate for decomposition |
+| 16-20 | Very high | Difficult to test thoroughly; should be split |
+| 21+ | Extreme | Nearly untestable; refactor immediately |
+
+**Reporting rules:**
+- If computed by a tool: report the exact number (e.g., `15`)
+- If estimated by reading code: always use `~` prefix (e.g., `~15`)
+- Never mix exact and estimated numbers without distinguishing them
+
 ## Calibrating to Context
 
 Severity is relative to the codebase context:

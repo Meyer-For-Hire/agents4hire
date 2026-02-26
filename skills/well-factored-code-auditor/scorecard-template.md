@@ -80,9 +80,11 @@ Follow the diagram with a brief assessment of whether the architecture delivers 
 
 #### Complexity Hotspots
 
-| Method/Function | Cyclomatic Complexity | Lines | Test Coverage | Recommendation |
-|---|---|---|---|---|
-| [name] | [number] | [count] | [covered/partial/none] | [recommendation] |
+| Method/Function | Cyclomatic Complexity | Risk | Lines | Test Coverage | Recommendation |
+|---|---|---|---|---|---|
+| [name] | [~number or exact] | [low/moderate/high/very high/extreme] | [count] | [covered/partial/none] | [recommendation] |
+
+Use `~` prefix for estimated CC, exact numbers for tool-computed CC. See `grading-rubric.md` for risk level thresholds.
 
 [Repeat "### [Component Name]" section for each component]
 

@@ -13,4 +13,4 @@ Initial release.
 - Scorecard template with Mermaid architecture diagrams, component breakdowns, complexity hotspots, and severity summaries
 - Cyclomatic complexity reference scale with `~` prefix convention for estimated values
 - Plan review checklist for post-planning quality gate (coverage, specificity, risk, ordering, scope)
-- Graceful degradation when Superpowers plugin is not installed
+- Graceful degradation when Superpowers plugin is not installed. We hope no one ever tests that, because who doesn't want Superpowers?

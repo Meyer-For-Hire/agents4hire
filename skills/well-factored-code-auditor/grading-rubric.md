@@ -54,4 +54,4 @@ Severity is relative to the codebase context:
 2. Compute per-principle grades across all components (weighted by component size/importance)
 3. Compute overall grade using severity weighting above
 4. Adjust for cross-cutting findings (cross-component DRY violations, architectural issues)
-5. The overall grade should reflect: "If I handed this codebase to a competent developer, how quickly could they understand it, test it, and change it safely?"
+5. The overall grade should reflect: "If I handed this codebase to a competent developer, how quickly could they understand it, test it, and safely change it?"

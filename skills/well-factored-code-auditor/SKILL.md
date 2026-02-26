@@ -7,6 +7,8 @@ description: Use when assessing how well-factored a codebase is, identifying ref
 
 ## Overview
 
+**Announce at start:** "I'm using the well-factored-code-auditor skill to audit this codebase."
+
 Systematic codebase factoring audit producing a graded scorecard and refactoring plan.
 
 **Core test:** Well-factored code is easy to test. Hard-to-test code is a symptom of poor factoring.
@@ -44,7 +46,7 @@ digraph audit {
 }
 ```
 
-**Phase 1 — Structural Survey & Style Discovery:** Map components, boundaries, dependencies, test infrastructure. Search for AGENTS.md, CLAUDE.md, CONTRIBUTING.md, linter/formatter configs (.swiftlint.yml, .eslintrc, .prettierrc, .editorconfig), IDE settings. Present findings and ask user about additional style sources.
+**Phase 1 — Structural Survey & Style Discovery:** Map components, boundaries, dependencies, test infrastructure. Search for AGENTS.md, CLAUDE.md, CONTRIBUTING.md, linter/formatter configs (.swiftlint.yml, .eslintrc, .prettierrc, .editorconfig), IDE settings. **Survey only — do not assess or grade.** Present findings and ask: "Are there additional style sources I should consider? Any components to prioritize or exclude?"
 
 **Phase 2 — Analysis Planning:** Prioritize components by risk/complexity. Produce analysis plan via `superpowers:writing-plans`. User reviews.
 
@@ -52,7 +54,7 @@ digraph audit {
 
 **Phase 4 — Cross-Cutting Analysis:** Using component summaries, examine: DRY across boundaries, dependency direction, shared utility coverage, naming consistency, dead code across modules.
 
-**Phase 5 — Synthesis & Scorecard:** Grade using `grading-rubric.md`. Write `./docs/YYYY-MM-DD-well-factored-code-scorecard.md` per `scorecard-template.md`. Present to user with checkpoint questions.
+**Phase 5 — Synthesis & Scorecard:** Read `grading-rubric.md` for criteria and `scorecard-template.md` for output format. Grade each principle per component, then compute overall. Write `./docs/YYYY-MM-DD-well-factored-code-scorecard.md`. Present to user: "What grade are you targeting? Areas to exclude from refactoring? Constraints?"
 
 **Phase 6 — Refactoring Plan Handoff:** From scorecard findings, user's target grade, and constraints, produce a spec and invoke `superpowers:writing-plans`.
 

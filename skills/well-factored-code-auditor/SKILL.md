@@ -42,7 +42,8 @@ digraph audit {
   P5 [label="Phase 5: Synthesis & Scorecard"];
   U3 [label="USER: Target grade?\nExclusions? Constraints?" shape=diamond];
   P6 [label="Phase 6: Refactoring Plan\n(invoke writing-plans)"];
-  P1 -> U1 -> P2 -> U2 -> P3 -> P4 -> P5 -> U3 -> P6;
+  P7 [label="Phase 7: Plan Review\n(plan-review-checklist.md)"];
+  P1 -> U1 -> P2 -> U2 -> P3 -> P4 -> P5 -> U3 -> P6 -> P7;
 }
 ```
 
@@ -57,6 +58,8 @@ digraph audit {
 **Phase 5 — Synthesis & Scorecard:** Read `grading-rubric.md` for criteria and `scorecard-template.md` for output format. Grade each principle per component, then compute overall. Write `./docs/YYYY-MM-DD-well-factored-code-scorecard.md`. Present to user: "What grade are you targeting? Are there areas you'd like to exclude from refactoring? Any other constraints you want me to keep in mind?"
 
 **Phase 6 — Refactoring Plan Handoff:** From scorecard findings, user's target grade, and constraints, produce a spec and invoke `superpowers:writing-plans`.
+
+**Phase 7 — Plan Review:** Read `plan-review-checklist.md` and review the plan against the scorecard. Run this phase when the plan has 15+ tasks, touches components graded C or below, involves god-object extraction, or modifies user-flagged fragile code. If the review finds gaps, fix the plan and re-commit before handing off for execution.
 
 ## Superpowers Dependency
 
@@ -111,3 +114,4 @@ claude plugin install superpowers@superpowers-marketplace
 
 - `grading-rubric.md` — letter grade scale, per-principle criteria, severity weighting, context calibration
 - `scorecard-template.md` — exact output template with all required sections
+- `plan-review-checklist.md` — post-planning review checklist for coverage, specificity, risk, ordering, and scope

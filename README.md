@@ -21,6 +21,7 @@ Systematic codebase factoring audit that assesses code quality across seven prin
 - `skills/well-factored-code-auditor/SKILL.md` — main skill document
 - `skills/well-factored-code-auditor/grading-rubric.md` — letter grade scale and per-principle criteria
 - `skills/well-factored-code-auditor/scorecard-template.md` — output template for the scorecard
+- `skills/well-factored-code-auditor/plan-review-checklist.md` — post-planning review checklist for refactoring plans
 
 ## Installation
 

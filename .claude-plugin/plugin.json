@@ -1,0 +1,9 @@
+{
+  "name": "agents4hire",
+  "description": "Specialized AI agents for code quality, refactoring, and engineering excellence",
+  "version": "0.1.0",
+  "author": {
+    "name": "Meyer For Hire"
+  },
+  "keywords": ["agents", "code-quality", "refactoring", "audit", "well-factored-code"]
+}

@@ -2,7 +2,7 @@
 
 Date: 2026-02-25
 Status: Draft
-Package: agents4hire (Meyer For Hire)
+Package: agents4hire (Meyer For Hire Consulting, LLC)
 Skill name: well-factored-code-auditor
 
 ## Overview

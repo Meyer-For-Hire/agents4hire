@@ -30,7 +30,7 @@ Create `.claude-plugin/plugin.json`:
   "description": "Specialized AI agents for code quality, refactoring, and engineering excellence",
   "version": "0.1.0",
   "author": {
-    "name": "Meyer For Hire"
+    "name": "Meyer For Hire Consulting, LLC"
   },
   "keywords": ["agents", "code-quality", "refactoring", "audit", "well-factored-code"]
 }
@@ -44,7 +44,7 @@ Create `.claude-plugin/marketplace.json`:
   "name": "agents4hire",
   "description": "Specialized AI agents for code quality, refactoring, and engineering excellence",
   "owner": {
-    "name": "Meyer For Hire"
+    "name": "Meyer For Hire Consulting, LLC"
   },
   "plugins": [
     {
@@ -53,7 +53,7 @@ Create `.claude-plugin/marketplace.json`:
       "version": "0.1.0",
       "source": "./",
       "author": {
-        "name": "Meyer For Hire"
+        "name": "Meyer For Hire Consulting, LLC"
       }
     }
   ]
@@ -66,7 +66,7 @@ Brief README describing the agents4hire package, its purpose, and installation i
 
 **Step 4: Create LICENSE**
 
-MIT license, copyright Meyer For Hire.
+MIT license, copyright Meyer For Hire Consulting, LLC.
 
 **Step 5: Create skill directory**
 

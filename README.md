@@ -22,6 +22,15 @@ Systematic codebase factoring audit that assesses code quality across seven prin
 - `skills/well-factored-code-auditor/grading-rubric.md` — letter grade scale and per-principle criteria
 - `skills/well-factored-code-auditor/scorecard-template.md` — output template for the scorecard
 
+## Dependencies
+
+**Optional but recommended:** The [superpowers](https://github.com/obra/superpowers-marketplace) plugin by Jesse Vincent. The well-factored-code-auditor uses `superpowers:writing-plans` for structured analysis and refactoring plans. Without it, the auditor still works but produces inline plans instead of using the superpowers structured planning workflow.
+
+```bash
+claude plugin marketplace add obra/superpowers-marketplace
+claude plugin install superpowers@superpowers-marketplace
+```
+
 ## Installation
 
 Add `agents4hire` as a Claude Code plugin:

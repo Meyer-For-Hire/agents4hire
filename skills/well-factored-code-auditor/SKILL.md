@@ -54,9 +54,29 @@ digraph audit {
 
 **Phase 4 — Cross-Cutting Analysis:** Using component summaries, examine: DRY across boundaries, dependency direction, shared utility coverage, naming consistency, dead code across modules.
 
-**Phase 5 — Synthesis & Scorecard:** Read `grading-rubric.md` for criteria and `scorecard-template.md` for output format. Grade each principle per component, then compute overall. Write `./docs/YYYY-MM-DD-well-factored-code-scorecard.md`. Present to user: "What grade are you targeting? Areas to exclude from refactoring? Constraints?"
+**Phase 5 — Synthesis & Scorecard:** Read `grading-rubric.md` for criteria and `scorecard-template.md` for output format. Grade each principle per component, then compute overall. Write `./docs/YYYY-MM-DD-well-factored-code-scorecard.md`. Present to user: "What grade are you targeting? Are there areas you'd like to exclude from refactoring? Any other constraints you want me to keep in mind?"
 
 **Phase 6 — Refactoring Plan Handoff:** From scorecard findings, user's target grade, and constraints, produce a spec and invoke `superpowers:writing-plans`.
+
+## Superpowers Dependency
+
+This skill builds on the excellent [superpowers](https://github.com/obra/superpowers-marketplace) plugin by Jesse Vincent, whose disciplined approach to skill-driven AI workflows inspired our methodology. We're grateful for that foundation.
+
+**At the start of the audit, check if `superpowers` skills are available** by looking for `superpowers:writing-plans` in the available skills list.
+
+**If superpowers IS installed:** Use `superpowers:writing-plans` in Phases 2 and 6 as specified. Use `superpowers:executing-plans` for Phase 3 if the analysis plan warrants it.
+
+**If superpowers is NOT installed:** Tell the user:
+- Phases 1, 3, 4, and 5 work fully without superpowers
+- Phase 2 (Analysis Planning) will produce a plan inline instead of using the structured writing-plans workflow — still functional but less rigorous
+- Phase 6 (Refactoring Plan) will produce a prioritized list inline instead of a formal plan document — actionable but less structured
+- Offer: "The superpowers plugin would improve the planning phases. Would you like instructions for installing it?"
+
+**Install instructions (provide if asked):**
+```bash
+claude plugin marketplace add obra/superpowers-marketplace
+claude plugin install superpowers@superpowers-marketplace
+```
 
 ## Boundaries
 

@@ -46,7 +46,7 @@ digraph audit {
 }
 ```
 
-**Phase 1 — Structural Survey & Style Discovery:** Map components, boundaries, dependencies, test infrastructure. Search for AGENTS.md, CLAUDE.md, CONTRIBUTING.md, linter/formatter configs (.swiftlint.yml, .eslintrc, .prettierrc, .editorconfig), IDE settings. **Survey only — do not assess or grade.** Present findings and ask: "Are there additional style sources I should consider? Any components to prioritize or exclude?"
+**Phase 1 — Structural Survey & Style Discovery:** Map components, boundaries, dependencies, test infrastructure (count tests, not test lines; include coverage percentage if tooling is available). Search for AGENTS.md, CLAUDE.md, CONTRIBUTING.md, linter/formatter configs (.swiftlint.yml, .eslintrc, .prettierrc, .editorconfig), IDE settings. **Survey only — do not assess or grade.** Present findings and ask: "Are there additional style sources I should consider? Any components to prioritize or exclude?"
 
 **Phase 2 — Analysis Planning:** Prioritize components by risk/complexity. Produce analysis plan via `superpowers:writing-plans`. User reviews.
 

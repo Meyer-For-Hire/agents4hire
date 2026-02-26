@@ -48,8 +48,8 @@ Use a Mermaid diagram to show component relationships, dependency directions, an
 ```mermaid
 graph TD
     App["App Layer<br/>~3,500 lines | 0 tests"]
-    CLI["CLI Layer<br/>~3,500 lines | ~0 tests"]
-    Core["Core Library<br/>~7,500 lines | ~8,800 lines tests"]
+    CLI["CLI Layer<br/>~3,500 lines | 2 tests"]
+    Core["Core Library<br/>~7,500 lines | 148 tests"]
     ExtDep["External Dependency"]
 
     App --> Core

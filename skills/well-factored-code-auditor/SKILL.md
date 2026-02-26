@@ -62,9 +62,9 @@ digraph audit {
 
 This skill builds on the excellent [Superpowers](https://github.com/obra/superpowers) plugin by Jesse Vincent, whose disciplined approach to skill-driven AI workflows is our inspiration. We're grateful for that foundation, and to Jesse and the community that maintains and improves Superpowers.
 
-**At the start of the audit, check if `superpowers` skills are available** by looking for `superpowers:writing-plans` in the available skills list.
+**At the start of the audit, check if `superpowers` skills are available** by looking for `superpowers:writing-plans` in the available skills list. **Announce the result to the user.**
 
-**If Superpowers IS installed:** Use `superpowers:writing-plans` in Phases 2 and 6 as specified. Use `superpowers:executing-plans` for Phase 3 if the analysis plan warrants it.
+**If Superpowers IS installed:** Tell the user: "I see you have Superpowers installed — excellent. The Well-Factored Code Auditor was built to work with Superpowers' structured planning workflows, so I'll use `writing-plans` for the analysis and refactoring plans." Then use `superpowers:writing-plans` in Phases 2 and 6 as specified. Use `superpowers:executing-plans` for Phase 3 if the analysis plan warrants it.
 
 **If Superpowers is NOT installed:** Tell the user:
 "You don't seem to have Superpowers installed. The Well Factored Code Auditor will still do its job, but might not do it as well as if you give it Superpowers."

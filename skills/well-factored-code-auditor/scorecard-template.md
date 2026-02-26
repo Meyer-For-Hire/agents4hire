@@ -43,7 +43,21 @@ Auditor: agents4hire:well-factored-code-auditor
 
 ## Architecture Overview
 
-[Component map, dependency directions, shared code locations, test infrastructure. Include a brief assessment of whether the architecture delivers on its stated intent.]
+Use a Mermaid diagram to show component relationships, dependency directions, and key metrics. Example:
+
+```mermaid
+graph TD
+    App["App Layer<br/>~3,500 lines | 0 tests"]
+    CLI["CLI Layer<br/>~3,500 lines | ~0 tests"]
+    Core["Core Library<br/>~7,500 lines | ~8,800 lines tests"]
+    ExtDep["External Dependency"]
+
+    App --> Core
+    CLI --> Core
+    Core --> ExtDep
+```
+
+Follow the diagram with a brief assessment of whether the architecture delivers on its stated intent.
 
 ## Strengths
 

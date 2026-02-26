@@ -24,7 +24,7 @@ Systematic codebase factoring audit that assesses code quality across seven prin
 
 ## Installation
 
-Add the Meyer For Hire marketplace, then install the plugin:
+Add the Meyer For Hire Consulting marketplace, then install the plugin:
 
 In Claude Code:
 ```
@@ -49,7 +49,7 @@ claude plugin install agents4hire@m4h-marketplace
 
 ## Author
 
-Meyer For Hire
+Meyer For Hire Consulting, LLC
 
 ## License
 

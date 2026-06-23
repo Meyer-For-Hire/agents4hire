@@ -1,1 +1,8 @@
 .worktrees/
+*tmp/
+
+# Agentisms
+.claude/*.local.json
+.claude/*.local.md
+*.local.json
+*.local.md

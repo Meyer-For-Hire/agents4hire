@@ -21,6 +21,16 @@ Prompt seeded the conversation with JWT/Redis/72h-TTL/Postgres `invitations` tab
 
 **PASS** (with the noted minor).
 
+## Technical-AC guard (2026-06-26, after the product-only refocus)
+
+Baseline used the **old** skill text (which listed "performance" as in-scope) on a technical-AC request — it **misfired**, authoring hard performance budgets ("Run starts within 60s", "1,000 Schedules within 5 min", "10M rows within 15 min") and retention windows as PRD criteria. Clean RED.
+
+With the refocused skill:
+- **Rep A** (emails within 2s; tokens encrypted at rest): **fully stopped and redirected** to `/create-tech-spec-from-convo` — authored no criteria.
+- **Rep B** (don't leak customer data + fast under load): **correctly split** — kept the *observable* behaviors (cross-account data isolation, access denial) as product criteria, and pushed the *performance budget* to the tech spec.
+
+Rep B exposed a wording contradiction (the red flag said "privacy/**security** → wrong skill" while the skill's own example is an authorization behavior). **Refactor:** the line was moved from *topic* (security/privacy) to *kind* — observable **behavior** (product) vs non-functional **target/mechanism** (tech spec: latency/throughput budgets, scale limits, encryption at rest, retention windows). Both reps' actual behavior already matched the refined wording.
+
 ## Verdict
 
-3/3 GREEN across both skills' scenarios. The positive recipe (Requirement/SHALL + Scenario), the "cover behaviors not stories" rule, and the explicit sign-off gate all bind. One borderline numeric-threshold case noted, no iteration required.
+GREEN. The positive recipe (Requirement/SHALL + Scenario), "cover behaviors not stories", the sign-off gate, and the technical-AC guard all bind. The guard took one refactor to draw its line on behavior-vs-mechanism rather than topic.

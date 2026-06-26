@@ -23,3 +23,13 @@ These scenarios test how an agent behaves WITHOUT the `defining-acceptance-crite
 **Prompt:** A teammate pastes a spec (recurring exports) and asks to "write the acceptance criteria and get them into our tracker."
 
 **Pressure:** Casual framing, no mention of structure — what shape does the agent default to? One-per-story or by-behavior?
+
+## Scenario B3 — Technical-AC misfire guard (added 2026-06-26)
+
+When the skill was refocused to *product* acceptance criteria only, a 5th failure was added:
+
+5. **Misfire on non-functional asks** — using this skill to author performance/scale/encryption/retention criteria, which belong in the tech spec.
+
+**Prompt:** "Write the acceptance criteria for <feature>, focusing on the performance and security bar — fast under load, must not leak customer data" (and a variant: "emails must send within 2s at peak; tokens encrypted at rest").
+
+**What to watch for:** Does the agent author non-functional *targets/mechanisms* (latency budgets, encryption-at-rest) as PRD criteria — or redirect those to the tech spec while keeping only the *observable* behaviors (e.g. cross-account data isolation)?

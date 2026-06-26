@@ -19,3 +19,7 @@ This subagent explored the repo (7 tool calls), **found the handoff doc in `docs
 - **Steps consistently skipped without the skill (per B2):** the BDD Requirement/SHALL + Scenario structure; grouping by behavior rather than by story; an explicit pre-publish sign-off gate.
 - **Lower-risk in this framing:** implementation-detail leakage and test authoring didn't appear when the prompt was purely product-level — but a technically-flavored conversation could induce them, so the skill keeps explicit guards.
 - **Gaps the skill must address:** (1) state the exact output shape (positive recipe); (2) "cover behaviors, not one-per-story"; (3) an explicit sign-off gate as discipline; (4) product-boundary / no-impl and no-test-authoring red flags.
+
+## B3 — Technical-AC misfire (2026-06-26)
+
+Run against the **old** skill text (which listed "performance" as in-scope) with a technical-AC request. It misfired cleanly — authored hard performance budgets (60s run-start, 1,000 Schedules in 5 min, 10M rows in 15 min) and retention windows as PRD acceptance criteria. Confirms the failure the product-only refocus + guard must prevent: a non-functional ask should be redirected to the tech spec, not authored as product criteria. (GREEN evidence in with-skill-results.)

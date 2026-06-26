@@ -1,9 +1,9 @@
 {
   "name": "agents4hire",
-  "description": "Specialized AI agents for code quality, refactoring, and engineering excellence",
-  "version": "0.1.0",
+  "description": "Specialized AI agents and skills for code quality, refactoring, and the product-development workflow",
+  "version": "0.2.0",
   "author": {
     "name": "Meyer For Hire Consulting, LLC"
   },
-  "keywords": ["agents", "code-quality", "refactoring", "audit", "well-factored-code"]
+  "keywords": ["agents", "code-quality", "refactoring", "audit", "well-factored-code", "product-development", "prd", "acceptance-criteria", "domain-modeling"]
 }

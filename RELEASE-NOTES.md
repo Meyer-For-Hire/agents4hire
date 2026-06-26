@@ -1,6 +1,6 @@
 # agents4hire Release Notes
 
-## v0.2.0 (2026-06-25)
+## v0.2.0 (2026-06-26)
 
 Product-development workflow skills for the M4H/PathX product-definition phase, built on Matt Pocock's skills kit.
 

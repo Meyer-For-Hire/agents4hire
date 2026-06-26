@@ -83,4 +83,4 @@ Then write `docs/agents/issue-tracker.md` and `docs/agents/document-locations.md
 
 ### 5. Done
 
-Tell the user setup is complete and which skills now read from these files: `/create-prd-from-convo`, `/create-tech-spec-from-convo`, `/defining-acceptance-criteria`, `/sharpen-domain-language`, `/prd-to-acceptance-issues`, and `/check-acceptance-coverage`. Mention they can edit `docs/agents/*.md` directly later.
+Tell the user setup is complete and which skills now read from these files: `/create-prd-from-convo`, `/create-tech-spec-from-convo`, `/defining-acceptance-criteria`, `/sharpen-domain-language`, `/prd-to-acceptance-issues`, and `/map-product-acceptance-to-issues`. Mention they can edit `docs/agents/*.md` directly later.

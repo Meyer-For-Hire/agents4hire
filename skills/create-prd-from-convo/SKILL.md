@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Take the current conversation and produce a **product/UX PRD**, including its **acceptance criteria**. Do NOT interview the user; synthesize what you already know.
 
-This PRD is **product-facing**. It carries no implementation or testing decisions — those belong in a tech spec (`/create-tech-spec-from-convo`), produced in a later technical-design phase.
+This PRD is **product-facing**. It carries no implementation or testing decisions — those belong in the tech spec (`/create-tech-spec-from-convo`).
 
 This skill **writes a document; it does not create issues.** The PRD (acceptance criteria included) goes to the configured PRD location. Turning the acceptance criteria into tracker issues is a separate, deliberate step — see "After the PRD" below.
 
@@ -31,7 +31,7 @@ The PRD's destination is configured per repo. Read `docs/agents/document-locatio
 
 ## After the PRD
 
-The acceptance criteria live in the PRD as the source draft. Once the PRD passes review, publish them as sub-issues in the product issue tracker under the product epic with `/prd-to-acceptance-issues` — each Requirement becomes one sub-issue whose issue ID is the stable criterion ID, written back into the PRD. Do not create any issues for acceptance criteria now.
+The acceptance criteria live in the PRD as the source draft. Once the PRD passes review, publish them with `/prd-to-acceptance-issues`. Don't create any acceptance-criteria issues now.
 
 <prd-template>
 

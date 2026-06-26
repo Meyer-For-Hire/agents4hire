@@ -7,7 +7,7 @@ description: Use when sharpening a product's ubiquitous language or domain termi
 
 Actively build and sharpen the project's **ubiquitous language** with a product owner. Challenge terms, invent edge-case scenarios, and write the glossary down the moment terms crystallise. The point is precise, shared vocabulary that the PRD and the BDD acceptance criteria will reuse word-for-word — consistent nouns and verbs are what make downstream criteria (and later their tests) coherent.
 
-This is the *product-definition* counterpart to `/domain-modeling`. It is the same language discipline with the engineering concerns removed. (Adapted from `/domain-modeling`; ADR-offering and code cross-referencing deliberately removed.)
+This is the product-definition counterpart to `/domain-modeling`, with the engineering concerns (ADRs, code cross-referencing) left out.
 
 ## What this session does
 
@@ -41,7 +41,7 @@ Be opinionated — when several words mean one concept, pick one and list the re
 
 You are interviewing a **product owner, not the technical architect.** Stay in language and observable behavior. If a question would decide *how the system is built*, it is out of scope here — name it in one line, note it's for technical design, and move on.
 
-- **Do not ask the product owner to make decisions that would result in an ADR** — architectural shape, technology or vendor choices, integration patterns, storage/schema, data-retention mechanisms, token strategies. These are real trade-offs, but the architect owns them. Defer them to the architect's session (`/grill-with-docs`) and the tech spec (`/create-tech-spec-from-convo`).
+- **Do not ask the product owner to make decisions that would result in an ADR** — architectural shape, technology or vendor choices, integration patterns, storage/schema, data-retention mechanisms, token strategies. These are real trade-offs, but the architect owns them. Defer them to `/grill-with-docs` and `/create-tech-spec-from-convo`.
 - **Do not go to the codebase to cross-reference.** This is pre-implementation product definition; the language derives from the conversation and the glossary, not from source. There may be no code yet.
 - **Keep it a glossary, not a design.** Capture what concepts *are* and how they relate — never how they'd be implemented.
 

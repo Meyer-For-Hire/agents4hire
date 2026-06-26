@@ -34,13 +34,14 @@ The flow, roughly in order:
 1. [`/grill-the-pm`](skills/grill-the-pm/SKILL.md) — relentless interview to sharpen a product owner's feature definition and build the glossary, without dragging them into architecture. The PM counterpart to Pocock's `/grill-with-docs` (which stays the architect's tool). *(user-invoked)*
 2. [`/create-prd-from-convo`](skills/create-prd-from-convo/SKILL.md) — synthesize a product/UX PRD (with a BDD acceptance-criteria section) and publish it to the configured PRD location. Writes a document; creates no issues. *(user-invoked)*
 3. **After PRD review:** [`/prd-to-acceptance-issues`](skills/prd-to-acceptance-issues/SKILL.md) — publish the PRD's criteria as one sub-issue per Requirement (stable criterion IDs) in the product tracker. *(user-invoked)*
-4. [`/create-tech-spec-from-convo`](skills/create-tech-spec-from-convo/SKILL.md) — synthesize the technical half (seam analysis, implementation + testing decisions) into a tech spec. *(user-invoked)*
-5. **After tech-spec review:** Pocock's `/to-issues` creates the implementation slices, then [`/check-acceptance-coverage`](skills/check-acceptance-coverage/SKILL.md) mints technical-acceptance issues, links slices to the product criteria they satisfy, and reports coverage gaps. *(user-invoked)*
+4. [`/create-tech-spec-from-convo`](skills/create-tech-spec-from-convo/SKILL.md) — synthesize the technical half (seam analysis, implementation + testing decisions, and **technical acceptance criteria** by category: performance, scale, privacy, security) into a tech spec. *(user-invoked)*
+5. **After tech-spec review:** Pocock's `/to-issues` creates the implementation slices, folding each technical acceptance criterion into the slice it applies to. Then `/map-product-acceptance-to-issues` links each product acceptance criterion to the epic/milestone after which it's testable, flagging any criterion no work covers.
 
 Composed disciplines *(model-invoked — reached by the above or autonomously)*:
 
 - [`/defining-acceptance-criteria`](skills/defining-acceptance-criteria/SKILL.md) — derive BDD Given/When/Then criteria as PRD text (one Requirement per behavior). Authors criteria only; does not create issues.
 - [`/sharpen-domain-language`](skills/sharpen-domain-language/SKILL.md) — build and sharpen the ubiquitous language with a product owner; sliced from Pocock's `/domain-modeling` with ADRs and code cross-referencing removed.
+- [`/map-product-acceptance-to-issues`](skills/map-product-acceptance-to-issues/SKILL.md) — link published product acceptance-criteria issues to the epic/milestone after which they're testable; flag criteria no planned work covers. Links existing issues; creates none.
 
 And: [`/setup-m4h-agents4hire`](skills/setup-m4h-agents4hire/SKILL.md) configures a repo for all of the above. *(user-invoked)*
 

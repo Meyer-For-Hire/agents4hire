@@ -6,11 +6,11 @@ disable-model-invocation: true
 
 # PRD to Acceptance Issues
 
-Turn an **approved** PRD's Acceptance Criteria section into trackable sub-issues in the product issue tracker — one per Requirement — under the product epic. This is the deliberate, side-effecting publish step that `/create-prd-from-convo` and `/defining-acceptance-criteria` intentionally leave undone.
+Turn an **approved** PRD's Acceptance Criteria section into trackable sub-issues in the product issue tracker — one per Requirement — under the product epic.
 
 **Run this only after the PRD has passed product review.** Creating criterion issues is how the criteria become stable, testable units; the issue ID of each becomes the **stable criterion ID** that acceptance tests reference.
 
-This skill does **not** author or edit criteria (that's `/defining-acceptance-criteria`) and does **not** create implementation issues (that's `/to-issues`) or technical-acceptance issues (that's `/check-acceptance-coverage`).
+This skill only publishes existing criteria — it doesn't author or edit them, and it doesn't create implementation issues.
 
 ## Prerequisites
 

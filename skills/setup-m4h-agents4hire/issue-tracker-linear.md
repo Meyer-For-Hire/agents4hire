@@ -16,8 +16,9 @@ A skill should resolve these to IDs with `list_teams` / `list_projects` / `list_
 | Issue kind | Created by | Tracker | `ready-for-agent`? |
 | --- | --- | --- | --- |
 | Acceptance criteria (1 per Requirement) | `/prd-to-acceptance-issues` | **Product** | no |
-| Implementation slices (vertical tracer bullets) | `/to-issues` | **Engineering** | yes |
-| Technical-acceptance issues | `/check-acceptance-coverage` | **Engineering** | no |
+| Implementation slices (vertical tracer bullets; each carries the technical acceptance criteria it covers) | `/to-issues` | **Engineering** | yes |
+
+`/map-product-acceptance-to-issues` does not create issues — it links each product acceptance-criterion issue to the epic/milestone after which it's testable. Technical acceptance criteria are authored in the tech spec and folded into the slices above; they are not separate issues.
 
 ## Conventions
 

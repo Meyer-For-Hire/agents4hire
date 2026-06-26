@@ -23,7 +23,7 @@ The PRD's destination is configured per repo. Read `docs/agents/document-locatio
 
 1. Use the project's domain glossary vocabulary throughout. Respect any ADRs in the area. At product-definition time, derive the PRD from the conversation, user stories, and glossary — not from a codebase survey.
 
-2. Author the **Acceptance Criteria** section using the `/defining-acceptance-criteria` skill — it owns the discipline and the exact form. Review the full set with the user before finalizing the PRD.
+2. Author the **Acceptance Criteria** section using the `/defining-acceptance-criteria` skill. Review the full set with the user before finalizing the PRD.
 
 3. Write the PRD using the template below.
 
@@ -31,7 +31,7 @@ The PRD's destination is configured per repo. Read `docs/agents/document-locatio
 
 ## After the PRD
 
-The acceptance criteria live in the PRD as the source draft. Once the PRD passes review, publish them as sub-issues in the product issue tracker under the product epic with `/prd-to-acceptance-issues` — each Requirement becomes one sub-issue whose issue ID is the stable criterion ID, written back into the PRD. (This is deliberately a separate, post-approval step; the PRD skill creates no issues.)
+The acceptance criteria live in the PRD as the source draft. Once the PRD passes review, publish them as sub-issues in the product issue tracker under the product epic with `/prd-to-acceptance-issues` — each Requirement becomes one sub-issue whose issue ID is the stable criterion ID, written back into the PRD. Do not create any issues for acceptance criteria now.
 
 <prd-template>
 

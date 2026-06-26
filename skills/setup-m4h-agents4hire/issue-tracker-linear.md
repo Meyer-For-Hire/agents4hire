@@ -18,7 +18,7 @@ A skill should resolve these to IDs with `list_teams` / `list_projects` / `list_
 | Acceptance criteria (1 per Requirement) | `/prd-to-acceptance-issues` | **Product** | no |
 | Implementation slices (vertical tracer bullets; each carries the technical acceptance criteria it covers) | `/to-issues` | **Engineering** | yes |
 
-`/map-product-acceptance-to-issues` does not create issues — it links each product acceptance-criterion issue to the epic/milestone after which it's testable. Technical acceptance criteria are authored in the tech spec and folded into the slices above; they are not separate issues.
+`/map-product-acceptance-to-issues` does not create issues — it records a **one-way** reference on each product acceptance-criterion issue pointing to the implementation work after which it's testable (see "One-way anchoring" below). Technical acceptance criteria are authored in the tech spec and folded into the slices above; they are not separate issues.
 
 ## Conventions
 
@@ -33,6 +33,17 @@ A skill should resolve these to IDs with `list_teams` / `list_projects` / `list_
 ## Epics and sub-issues
 
 A **product epic** is a regular Linear issue used as the parent. The PRD links from it (via `links`), and acceptance-criteria sub-issues are created under it with `parentId`. **The Linear issue ID of each sub-issue is the stable criterion ID** — capture the returned IDs.
+
+## One-way anchoring (acceptance criterion → implementation)
+
+`/map-product-acceptance-to-issues` must reference implementation work from an acceptance-criterion issue **without** the reference surfacing on the implementation side — the implementing agent is fenced from acceptance tests.
+
+- **Do** record the anchor on the **criterion issue** as a **link attachment** to the implementation issue/epic/milestone URL: `links: [{url, title}]` on `save_issue`. A link attachment lives only on the issue it's added to.
+- **Do not** use a relation (`relatedTo`, `blocks`/`blockedBy`, parent/sub) between the criterion and the implementation work — Linear relations are symmetric and appear on **both** issues.
+- **Do not** set the criterion's `milestone` or `parentId` to the implementation milestone/epic — that would file the criterion under implementation, where the implementing agent would see it.
+- Write **nothing** to the implementation issue/epic/milestone.
+
+> Verify before relying on this: confirm Linear does not auto-create a backlink/mention on the target issue when a link attachment points at another Linear issue's URL. If it does, anchor to a non-issue locator (e.g. the milestone's URL, or a plain identifier in the criterion's body) instead.
 
 ## Triage labels
 

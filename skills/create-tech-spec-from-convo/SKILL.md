@@ -57,7 +57,7 @@ The testing decisions that were made. Include:
 
 ## Technical Acceptance Criteria
 
-The non-functional bar the implementation must clear, grouped by category. These are **part of the implementation** — `/to-issues` distributes each into the acceptance criteria of the vertical slice(s) it applies to; they do not become separate issues. Every criterion must be **verifiable**: state a measurable target or a checkable assertion, not an aspiration ("fast" → "p95 under 200 ms at 100 rps").
+The non-functional bar the implementation must clear, grouped by category. These are **part of the implementation** — `/to-issues` distributes each into the acceptance criteria of the vertical slice(s) it applies to; they do not become separate issues. Every criterion must be **verifiable**: state a measurable target or a checkable assertion, not an aspiration ("fast" → "p95 under 200 ms at 100 rps"). It's okay if there aren't criteria in one or more categories listed below, but it's unlikely that there are no acceptance criteria.
 
 ### Performance
 

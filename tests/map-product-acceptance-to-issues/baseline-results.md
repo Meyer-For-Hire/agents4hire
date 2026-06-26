@@ -16,3 +16,9 @@ Both baselines did stay in scope (mapped only; no issue creation) and both surfa
 ## Gap the skill must address
 
 Bind the anchor predicate: a criterion may be linked to a milestone only if completing that milestone makes its scenarios pass **end-to-end**; topical relatedness is not coverage; a criterion no planned work satisfies is a **gap**, reported explicitly. (Same lever validated in the predecessor `check-acceptance-coverage` cycle, now at milestone granularity.)
+
+## Directionality baseline (2026-06-26)
+
+Without the one-way guard, the agent reached for a symmetric **`relatedTo`** relation between each criterion and the implementation issues — and *explicitly defended the leak*: "relatedTo is symmetric, so the link also surfaces on each ENG issue… which is exactly the bidirectional visibility the team wants." That is precisely the fence break: the acceptance criterion becomes visible from the implementation issue. (It did avoid `parentId`/`milestone` reassignment and used a one-way attachment for the milestone — but the `relatedTo` to the ENG issues is the leak.)
+
+**Gap the skill must address:** make the reference one-directional — a link attachment on the criterion side only — and forbid symmetric relations and any write to the implementation side.

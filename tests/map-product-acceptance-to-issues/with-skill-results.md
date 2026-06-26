@@ -15,6 +15,14 @@ Run via fresh `general-purpose` subagents given the skill, instructed not to exp
 
 Where baseline-1 mapped PATHX-15 onto a topically-adjacent milestone and reported "no orphans," both with-skill reps refused the false anchor, left it unlinked, and reported it as the one gap — with counts.
 
+## Directionality (2026-06-26)
+
+Where the baseline reached for a symmetric `relatedTo` (leaking the criterion onto the implementation issues), both reps recorded the anchor as a **one-way link attachment on the criterion issue only**:
+- Rep 1 (3 criteria, all anchored): `links: [{url: <milestone URL>}]` on each PATHX issue; explicitly listed the avoided red flags — no `relatedTo`/`blocks`, no `parentId`/`milestone` reassignment, no write to ENG/M1/M2.
+- Rep 2 (one anchored, one orphan): one-way attachment on ACC-1; flagged ACC-2 as a coverage gap and refused to force a link; "the implementation issues/milestone remain free of any trace of the acceptance criteria."
+
+Both also handled the milestone-link fallback (if a milestone isn't directly linkable, point at the last implementation issue / milestone permalink).
+
 ## Verdict
 
-GREEN, no refactor needed. The coverage-definition lever (covered = scenarios pass end-to-end against a running instance; topical relatedness ≠ coverage) carries over from the predecessor `check-acceptance-coverage` cycle and binds the same way at milestone granularity. The skill also held its new scope boundaries: link-only, no issue creation, no tech-spec reading.
+GREEN on both disciplines. The coverage-definition lever (covered = scenarios pass end-to-end; topical relatedness ≠ coverage) and the one-way directionality guard (reference on the criterion side only; no symmetric relation; nothing written to the implementation side) both bind. No refactor needed.
